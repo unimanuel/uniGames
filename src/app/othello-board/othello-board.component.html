@@ -1,9 +1,9 @@
-<h3>Othello Game</h3>
+<h3>Manuel's Othello Game</h3>
 
 <main>
     <app-square
         *ngFor="let val of squares; let i = index"
-        [symbol]="i <= 2 ? 'O' : 'X'">
+        [symbol]="3 < i && i <= 25 ? 'O' : 'X'">
 
     </app-square>
 </main>

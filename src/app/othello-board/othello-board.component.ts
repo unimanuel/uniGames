@@ -12,7 +12,7 @@ export class OthelloBoardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.squares = Array(9).fill(null);
+    this.squares = Array(64).fill(null);
   }
 
 }
