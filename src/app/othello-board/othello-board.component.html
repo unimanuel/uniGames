@@ -1,0 +1,9 @@
+<h3>Othello Game</h3>
+
+<main>
+    <app-square
+        *ngFor="let val of squares; let i = index"
+        [symbol]="i <= 2 ? 'O' : 'X'">
+
+    </app-square>
+</main>
