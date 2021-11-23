@@ -3,7 +3,7 @@
 <main>
     <app-square
         *ngFor="let val of squares; let i = index"
-        [symbol]="3 < i && i <= 25 ? 'O' : 'X'">
+        [symbol]="3 < i && i <= 25 ? 'O' : i < 2 || i > 42 ? 'X' : i < 30 ? '*' : null">
 
     </app-square>
 </main>

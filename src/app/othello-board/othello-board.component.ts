@@ -15,4 +15,9 @@ export class OthelloBoardComponent implements OnInit {
     this.squares = Array(64).fill(null);
   }
 
+  makeMove(idx: number) {
+    this.squares.splice(idx, 1, 'X');
+    // this.squares[2] = 'X';
+  }
+
 }

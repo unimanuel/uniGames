@@ -1,2 +1,5 @@
 
-<button>{{ symbol }}</button>
+<button *ngIf="symbol=='O'" style="background-color:rgb(235, 113, 113)" mat-icon-button></button>
+<button *ngIf="symbol=='X'" style="background-color:rgb(123, 123, 243)" mat-icon-button></button>
+<!-- <button *ngIf="!symbol" style="background-color:rgb(252, 251, 191)" mat-icon-button></button> -->
+<button *ngIf="symbol=='*'" style="background-color:rgb(164, 255, 164)" mat-icon-button></button>
