@@ -10,6 +10,8 @@ export class OthelloBoardComponent implements OnInit {
   squares : any[];
   descr = 'test1';
   whosturn = 'X';
+  winner = null;
+  
   constructor() { }
 
   ngOnInit(): void {
