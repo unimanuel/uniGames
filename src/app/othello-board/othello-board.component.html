@@ -1,9 +1,13 @@
 <h3>Manuel's Othello Game</h3>
-
+<h5>Turn: {{whosturn}}</h5>
+<button mat-raised-button (click)="newGame()">New Game</button>
+<button mat-raised-button (click)="clearBoard()">Clear Board</button>
+<button mat-raised-button (click)="makeMove(1)">{{descr}}</button>
 <main>
     <app-square
         *ngFor="let val of squares; let i = index"
-        [symbol]="3 < i && i <= 25 ? 'O' : i < 2 || i > 42 ? 'X' : i < 30 ? '*' : null">
+        [symbol] = "val"
+        (click) = "makeMove(i)">
 
     </app-square>
 </main>
