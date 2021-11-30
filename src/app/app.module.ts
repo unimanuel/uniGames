@@ -7,7 +7,7 @@ import { SquareComponent } from './square/square.component';
 import { OthelloBoardComponent } from './othello-board/othello-board.component';
 
 import {MatButtonModule} from '@angular/material/button';
-// import {MatIconModule} from '@angular/material/icon';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    // MatIconModule
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

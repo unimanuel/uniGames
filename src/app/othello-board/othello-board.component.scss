@@ -1,12 +1,15 @@
 main {
     display: grid;
-    grid-template-columns: 40px 40px 40px 40px 40px 40px 40px 40px ;
+    grid-template-columns: 52px 52px 52px 52px 52px 52px 52px 52px ;
     grid-gap: 0px;
 }
 
 app-square {
     border: 1px rgb(224, 201, 98) solid;
-    height: 40px;
+    height: 52px;
+    display: flex;
+    align-items: center; //vertically center
+    justify-content: center; //horizontally center
 }
 
 h3 {

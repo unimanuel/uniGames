@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SquareComponent implements OnInit {
   
-  @Input() symbol: 'O' | 'X' | '*' | null
+  @Input() symbol: 'O' | 'X' | 'o' | 'x' | null
 
   constructor() {
   }
