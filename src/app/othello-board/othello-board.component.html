@@ -1,0 +1,28 @@
+<div class="container">
+<h3>Manuel's Othello Game</h3>
+<div class="infopane">
+<h5 *ngIf="!winner">Turn:
+    <button class="smallbutton" *ngIf="whosturn=='X'" style="background-color:rgb(123, 123, 243)" mat-icon-button></button>
+    <button class="smallbutton" *ngIf="whosturn=='O'" style="background-color:rgb(235, 113, 113)" mat-icon-button></button>
+</h5>
+<h5 *ngIf="winner">Winner: 
+    <button class="smallbutton" *ngIf="winner=='X'" style="background-color:rgb(123, 123, 243)" mat-icon-button></button>
+    <button class="smallbutton" *ngIf="winner=='O'" style="background-color:rgb(235, 113, 113)" mat-icon-button></button>
+</h5>
+<h5><button class="smallbutton" style="background-color:rgb(123, 123, 243)" mat-icon-button></button> : {{xScore}}</h5>
+<h5><button class="smallbutton" style="background-color:rgb(235, 113, 113)" mat-icon-button></button> : {{oScore}}</h5>
+<h5>Debug: {{dbgMsg}}</h5>
+<div class="buttoncontainer">
+<button mat-raised-button (click)="newGame()">New Game</button>
+<!-- <button mat-raised-button (click)="clearBoard()">Clear Board</button> -->
+</div>
+</div>
+<main>
+    <app-square
+        *ngFor="let val of squares; let i = index"
+        [symbol] = "val"
+        (click) = "makeMove(i)">
+
+    </app-square>
+</main>
+</div>

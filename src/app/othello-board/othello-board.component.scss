@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    grid-template-columns: 52px 52px 52px 52px 52px 52px 52px 52px ;
+    grid-gap: 0px;
+}
+
+app-square {
+    border: 1px rgb(224, 201, 98) solid;
+    height: 52px;
+    display: flex;
+    align-items: center; //vertically center
+    justify-content: center; //horizontally center
+}
+
+h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+h5 {
+    text-align: center;
+}
+button {
+    line-height: 20px;
+    height: 20px;
+    background-color: green;
+    color: white;
+}
+.smallbutton {
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    font-size: 2em !important;
+}
