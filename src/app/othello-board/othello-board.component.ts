@@ -9,10 +9,11 @@ export class OthelloBoardComponent implements OnInit {
 
   squares : any[];
   hintSquares: any[]
-  descr = 'test1';
   whosturn = 'X';
   winner : string | null;
   dbgMsg : string;
+  xScore : number;
+  oScore : number;
 
   constructor() { }
 
@@ -30,6 +31,7 @@ export class OthelloBoardComponent implements OnInit {
     this.squares[35] = 'O';
     this.squares[36] = 'X';
     this.setPossibleSquares();
+    this.checkWinner();
   }
 
   clearBoard() {
@@ -69,18 +71,20 @@ export class OthelloBoardComponent implements OnInit {
   checkWinner() : string | null
   {
     let xCount = 0, oCount = 0
-    let notDone : boolean
+    let notDone = false;
     for (let i = 0; i < 64; i++) {
       if (this.squares[i] == 'x' || this.squares[i] == 'o') { //little x and o existence determines if finished, no null check needed.
-        return null;
+        notDone = true;
       }
       this.squares[i] == 'X' ? xCount ++ : this.squares[i] == 'O' ? oCount ++ : null;
     }
+    this.xScore = xCount;
+    this.oScore = oCount;
+    if (notDone) return null;
     if (xCount == oCount) {
       return "Tie!"
     }
     else {
-      this.dbgMsg = "xcount" + xCount + "oCount" + oCount
       return xCount > oCount ? 'X' : 'O'
     }
   }
